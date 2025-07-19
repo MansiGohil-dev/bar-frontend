@@ -397,9 +397,11 @@ function Display() {
 
   const handleDownloadBarcode = (barcode, productName) => {
     const link = document.createElement('a');
-    link.href = barcode;
-    link.download = `${productName}-barcode.png`;
+    link.href = barcode; // This already includes the barcode number from the backend
+    link.download = `${productName}-barcode-${new Date().toISOString().split('T')[0]}.png`; // Optional: Add date to filename
+    document.body.appendChild(link);
     link.click();
+    document.body.removeChild(link);
   };
 
   return (
