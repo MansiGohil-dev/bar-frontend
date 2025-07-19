@@ -5,10 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "start": "vite preview --port 3000"
+    "build": "npx vite build",
+    "preview": "npx vite preview",
+    "start": "npx vite preview --port 3000"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",
